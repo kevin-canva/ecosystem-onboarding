@@ -1,0 +1,24 @@
+/* Custom theme overrides for Canva UI Kit variables */
+:root {
+  /* Override spacing if needed */
+  --ui-kit-space-200: 24px; /* Default is usually 16px */
+  --ui-kit-space-100: 12px; /* Default is usually 8px */
+  
+  /* Override colors if needed */
+  --ui-kit-color-content-placeholder-fg: rgba(0, 0, 0, 0.4);
+  
+  /* Override border radius if needed */
+  --ui-kit-radius-element-standard: 8px;
+  
+  /* Add your own custom variables */
+  --custom-joke-highlight-color: #ff6b6b;
+  --custom-joke-background: rgba(255, 107, 107, 0.1);
+}
+
+/* Custom classes using your overrides */
+.jokeText {
+  background-color: var(--custom-joke-background);
+  border-left: 3px solid var(--custom-joke-highlight-color);
+  padding: var(--ui-kit-space-200);
+  border-radius: var(--ui-kit-radius-element-standard);
+}
