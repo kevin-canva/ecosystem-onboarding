@@ -21,13 +21,14 @@
     "postinstall": "ts-node ./scripts/copy_env.ts"
   },
   "dependencies": {
-    "@canva/app-i18n-kit": "^1.1.1",
-    "@canva/app-ui-kit": "^5.0.2",
+    "@canva/app-i18n-kit": "^1.2.0",
+    "@canva/app-ui-kit": "^5.5.0",
     "@canva/asset": "^2.2.1",
-    "@canva/design": "^2.7.2",
+    "@canva/design": "^2.8.0",
     "@canva/error": "^2.1.0",
-    "@canva/platform": "^2.2.0",
+    "@canva/platform": "^2.2.1",
     "@canva/user": "^2.1.1",
+    "design": "link:@canva/intents/design",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "react-intl": "7.1.11"
@@ -52,6 +53,7 @@
     "@types/react": "19.1.13",
     "@types/react-dom": "19.1.9",
     "@types/webpack-env": "1.18.8",
+    "baseline-browser-mapping": "^2.9.19",
     "chalk": "4.1.2",
     "cli-table3": "0.6.5",
     "css-loader": "7.1.2",

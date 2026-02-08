@@ -15,13 +15,15 @@ export function JokeModeSelector({ selectionMode, onModeChange }: JokeModeSelect
     <Rows spacing="1u">
       <Text size="small"><strong>Select A Mode:</strong></Text>
       <Button 
-        variant={selectionMode === 'add' ? 'primary' : 'secondary'}
+        variant={'secondary'}
+        selected={selectionMode === 'add'}
         onClick={() => onModeChange('add')}
       >
         Add New Joke
       </Button>
       <Button 
-        variant={selectionMode === 'replace' ? 'primary' : 'secondary'}
+        variant={'secondary'}
+        selected={selectionMode === 'replace'}
         onClick={() => onModeChange('replace')}
       >
         Replace Selected Text With Joke

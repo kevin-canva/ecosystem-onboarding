@@ -1,7 +1,6 @@
 import { Rows, Title } from "@canva/app-ui-kit";
 import { useAddElement } from "../utils/use_add_element";
 import { useSelection } from "../utils/use_selection_hook";
-import { useFeatureSupport } from "../utils/use_feature_support";
 import { useState } from "react";
 import * as styles from "styles/components.css";
 import { useJokeFetcher } from "./hooks/useJokeFetcher";

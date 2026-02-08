@@ -9,26 +9,29 @@ importers:
   .:
     dependencies:
       '@canva/app-i18n-kit':
-        specifier: ^1.1.1
-        version: 1.1.1(intl-messageformat@10.7.18)(react-dom@19.1.1(react@19.1.1))(react-intl@7.1.11(react@19.1.1)(typescript@5.9.2))(react@19.1.1)
+        specifier: ^1.2.0
+        version: 1.2.0(@formatjs/intl@3.1.6(typescript@5.9.2))(intl-messageformat@10.7.18)(react-dom@19.1.1(react@19.1.1))(react-intl@7.1.11(react@19.1.1)(typescript@5.9.2))(react@19.1.1)
       '@canva/app-ui-kit':
-        specifier: ^5.0.2
-        version: 5.0.2(@types/react@19.1.13)(mobx@6.15.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        specifier: ^5.5.0
+        version: 5.5.0(@types/react@19.1.13)(mobx@6.15.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@canva/asset':
         specifier: ^2.2.1
         version: 2.2.1(@canva/error@2.1.0)
       '@canva/design':
-        specifier: ^2.7.2
-        version: 2.7.2(@canva/error@2.1.0)
+        specifier: ^2.8.0
+        version: 2.8.0(@canva/error@2.1.0)
       '@canva/error':
         specifier: ^2.1.0
         version: 2.1.0
       '@canva/platform':
-        specifier: ^2.2.0
-        version: 2.2.0(@canva/error@2.1.0)
+        specifier: ^2.2.1
+        version: 2.2.1(@canva/error@2.1.0)
       '@canva/user':
         specifier: ^2.1.1
         version: 2.1.1(@canva/error@2.1.0)
+      design:
+        specifier: link:@canva/intents/design
+        version: link:@canva/intents/design
       react:
         specifier: 19.1.1
         version: 19.1.1
@@ -96,6 +99,9 @@ importers:
       '@types/webpack-env':
         specifier: 1.18.8
         version: 1.18.8
+      baseline-browser-mapping:
+        specifier: ^2.9.19
+        version: 2.9.19
       chalk:
         specifier: 4.1.2
         version: 4.1.2
@@ -847,20 +853,28 @@ packages:
       eslint-plugin-unicorn: ^57
       typescript-eslint: ^8.27.0
 
-  '@canva/app-i18n-kit@1.1.1':
-    resolution: {integrity: sha512-MF4G5y6OfVBAlUH7BEGrWCxEsPvID3iluLHuPN/vXBp4SxSF6kCrkc65BdzylNuOV/sNnIIixBzC+Oh0lSX6Qg==}
+  '@canva/app-i18n-kit@1.2.0':
+    resolution: {integrity: sha512-dzaiEYFgcL5FVIs/yDk9Qn3RVPx76JNkhdFZS42WWFGzcowpGB1NABvdd98elI/T4qphM4ZGhWyHIUXiRf7dBg==}
     peerDependencies:
+      '@formatjs/intl': '>=2.10.4 <=3.1.6'
       intl-messageformat: '>=10.5.14 <=10.7.16'
       react: 18 || 19
       react-dom: 18 || 19
       react-intl: '>=6.6.8 <=7.1.11'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      react-intl:
+        optional: true
 
-  '@canva/app-ui-kit@5.0.2':
-    resolution: {integrity: sha512-b99IEka+w6NleSlr7rfpdeYzDueRr+aVRu8vKRubKu4hsgbfucl9OO+8J+sujXSOR50eU+kQjuU3RDpBd5REHw==}
+  '@canva/app-ui-kit@5.5.0':
+    resolution: {integrity: sha512-avWdkFJSLLPF4V0Xdhk6l4pFqkBFyPW310f128M5jcSZXttXzdnWlVW9CnyAezBf1oz3V0TyNsshG08X1vy2Ww==}
     peerDependencies:
-      mobx: ^6.13.3
-      react: 19.1.1
-      react-dom: 19.1.1
+      mobx: ^6.13.5
+      react: ^19.2.3
+      react-dom: ^19.2.3
 
   '@canva/asset@2.2.1':
     resolution: {integrity: sha512-UlBiuhCZjLSXdFKi7aad8ut74Mtu2UWKu70fknMzr2jKot75D3QsFNfkWTGFeXysY6kn++coe1CbV5ny1/IToQ==}
@@ -872,16 +886,16 @@ packages:
     engines: {node: '>=20.10.0'}
     hasBin: true
 
-  '@canva/design@2.7.2':
-    resolution: {integrity: sha512-vyffoueNdEq/pGIobR1JjgjxTBE+Cdn4TC2bqApg6sdvSbhazupbjoN21cYcHZYJ4u4hl1G+79shh00nMmYhug==}
+  '@canva/design@2.8.0':
+    resolution: {integrity: sha512-RqR+4m8Mm46wdV+dTDaeR+z+4XkAKXeYafEudFuzOxhYT5KGveiLhGO8igJacb0ctdfMRrZAQcv7+ABwoLns6Q==}
     peerDependencies:
       '@canva/error': ^2.0.0
 
   '@canva/error@2.1.0':
     resolution: {integrity: sha512-9+QfAoO8PymYtlRkZG6BqystH9/KZr2AEm41XrCu1oil058/4PKJ9A4uVBTJuS6Dwm76inYE+ONqvEx+Fa1DhA==}
 
-  '@canva/platform@2.2.0':
-    resolution: {integrity: sha512-9cPeMTnnVns9kl/PTaLobSjYv2LI1SkaZwmSLo9n2KsSNQzgWj/e6hnTaq76zjoOWcTLFu4eK8fmbrhVSJ+9oA==}
+  '@canva/platform@2.2.1':
+    resolution: {integrity: sha512-4/nUG8zq5u1QkHfRWKweHM3p5ijkD5RIqg3LUE/7rzbRMlnUDo3MI3SY5/zASF289j+EhmBTFhBhzPG9Cnt2hg==}
     peerDependencies:
       '@canva/error': ^2.0.0
 
@@ -1316,9 +1330,6 @@ packages:
         optional: true
       webpack-plugin-serve:
         optional: true
-
-  '@seznam/compose-react-refs@1.0.6':
-    resolution: {integrity: sha512-izzOXQfeQLonzrIQb8u6LQ8dk+ymz3WXTIXjvOlTXHq6sbzROg3NWU+9TTAOpEoK9Bth24/6F/XrfHJ5yR5n6Q==}
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -1943,8 +1954,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  baseline-browser-mapping@2.8.15:
-    resolution: {integrity: sha512-qsJ8/X+UypqxHXN75M7dF88jNK37dLBRW7LeUzCPz+TNs37G8cfWy9nWzS+LS//g600zrt2le9KuXt0rWfDz5Q==}
+  baseline-browser-mapping@2.9.19:
+    resolution: {integrity: sha512-ipDqC8FrAl/76p2SSWKSI+H9tFwm7vYqXQrItCuiVPt26Km0jS+NzSsBWAaBusvSbQcfJG+JitdMm+wZAgTYqg==}
     hasBin: true
 
   basic-auth@2.0.1:
@@ -6214,17 +6225,18 @@ snapshots:
       eslint-plugin-unicorn: 57.0.0(eslint@9.37.0(jiti@1.21.7))
       typescript-eslint: 8.46.0(eslint@9.37.0(jiti@1.21.7))(typescript@5.9.2)
 
-  '@canva/app-i18n-kit@1.1.1(intl-messageformat@10.7.18)(react-dom@19.1.1(react@19.1.1))(react-intl@7.1.11(react@19.1.1)(typescript@5.9.2))(react@19.1.1)':
+  '@canva/app-i18n-kit@1.2.0(@formatjs/intl@3.1.6(typescript@5.9.2))(intl-messageformat@10.7.18)(react-dom@19.1.1(react@19.1.1))(react-intl@7.1.11(react@19.1.1)(typescript@5.9.2))(react@19.1.1)':
     dependencies:
+      '@formatjs/intl': 3.1.6(typescript@5.9.2)
       intl-messageformat: 10.7.18
+    optionalDependencies:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
       react-intl: 7.1.11(react@19.1.1)(typescript@5.9.2)
 
-  '@canva/app-ui-kit@5.0.2(@types/react@19.1.13)(mobx@6.15.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@canva/app-ui-kit@5.5.0(@types/react@19.1.13)(mobx@6.15.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@floating-ui/react': 0.26.28(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@seznam/compose-react-refs': 1.0.6
       classnames: 2.5.1
       intl-messageformat: 10.7.18
       mobx: 6.15.0
@@ -6263,13 +6275,13 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@canva/design@2.7.2(@canva/error@2.1.0)':
+  '@canva/design@2.8.0(@canva/error@2.1.0)':
     dependencies:
       '@canva/error': 2.1.0
 
   '@canva/error@2.1.0': {}
 
-  '@canva/platform@2.2.0(@canva/error@2.1.0)':
+  '@canva/platform@2.2.1(@canva/error@2.1.0)':
     dependencies:
       '@canva/error': 2.1.0
 
@@ -6786,8 +6798,6 @@ snapshots:
     optionalDependencies:
       type-fest: 4.41.0
       webpack-dev-server: 5.2.2(debug@4.4.1)(webpack-cli@6.0.1)(webpack@5.99.9)
-
-  '@seznam/compose-react-refs@1.0.6': {}
 
   '@sinclair/typebox@0.27.8': {}
 
@@ -7571,7 +7581,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  baseline-browser-mapping@2.8.15: {}
+  baseline-browser-mapping@2.9.19: {}
 
   basic-auth@2.0.1:
     dependencies:
@@ -7636,7 +7646,7 @@ snapshots:
 
   browserslist@4.26.3:
     dependencies:
-      baseline-browser-mapping: 2.8.15
+      baseline-browser-mapping: 2.9.19
       caniuse-lite: 1.0.30001749
       electron-to-chromium: 1.5.234
       node-releases: 2.0.23
